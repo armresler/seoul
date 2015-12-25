@@ -31,10 +31,13 @@ include "connect_db.php";
 		date datetime,
 		ip_addr varchar(30))";
 	
-	$result = mysql_query($sql, $connect) or die("user_tbl 테이블이 이미 존재 합니다.
-	<script> alert(' 테이블이 이미 존재 합니다.');
-	location.replace('success.php');
-	</script>");
+	$result = mysql_query($sql, $connect) 
+			or die("user_tbl 테이블이 이미 존재 합니다.
+	
+			<script> 
+				alert(' 테이블이 이미 존재 합니다.');
+				location.replace('success.php');
+			</script>");
 		}
 	
 	echo "테이블이 만들어졌습니다. <br />";
