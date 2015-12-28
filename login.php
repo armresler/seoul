@@ -1,11 +1,9 @@
 <?php
 include "session.php";
 include "connect_db.php";
-
 $sql = "select *from user_tbl where userid = '$fuserid' and passwd = '$fpasswd' ";
 $res = mysql_query($sql, $connect);
 $list = mysql_num_rows($res);
-
 if($list)
 {
 $row = mysql_fetch_array($res);
